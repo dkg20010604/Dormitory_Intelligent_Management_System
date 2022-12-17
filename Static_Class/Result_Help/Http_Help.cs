@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Static_Class.Result_Help
+﻿namespace Static_Class.Result_Help
 {
-    public class Http_Help<T> where T : class, new()
+    public class Http_Help<T>
     {
         public int Code{get; set;}
         public string? Message{get; set;}
