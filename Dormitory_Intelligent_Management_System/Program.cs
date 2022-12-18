@@ -95,7 +95,7 @@ namespace Dormitory_Intelligent_Management_System
 
             builder.Services.AddSqlSugar(new IocConfig()
             {
-                ConnectionString = "Data Source=DESKTOP-54954D6\\SQLEXPRESS;Initial Catalog=DIMS;User ID=sa;Password=123456",
+                ConnectionString = "Data Source=118.190.201.1;Initial Catalog=DIMS;User ID=sa;Password=1234567890.Ww",
                 DbType = IocDbType.SqlServer,
                 IsAutoCloseConnection = true,
                 //直接使用 DbScoped.SugarScope 相当于EFcore的context

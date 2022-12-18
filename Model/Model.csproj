@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="AutoMapperProfile\" />
-    <Folder Include="DTOModels\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Model.DbModels;
 using SqlSugar.IOC;
 using Static_Class.Result_Help;
 using System.IdentityModel.Tokens.Jwt;
@@ -27,7 +28,14 @@ namespace Dormitory_Intelligent_Management_System.Controllers
         
         public Http_Help<string> Login([FromBody]LoginInfo loginInfo)
         {
+            //college_info college_Info = new college_info()
+            //{
+            //    college_id =0,
+            //    college_name = "数据科学与计算机学院"
+            //};
 
+            //DbScoped.SugarScope.Insertable<college_info>(college_Info).ExecuteCommand();
+            //return new Http_Helper<List<college_info>>().Succeed("OK", DbScoped.SugarScope.Queryable<college_info>().ToList());
             #region 登陆验证
 
             #endregion
