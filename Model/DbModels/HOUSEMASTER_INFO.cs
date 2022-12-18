@@ -11,25 +11,28 @@ namespace Model.DbModels
     [SugarTable("HOUSEMASTER_INFO")]
     public partial class housemaster_info
     {
-           public housemaster_info(){
+        public housemaster_info()
+        {
 
 
-           }
-           /// <summary>
-           /// Desc:后勤人员工号
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           [SugarColumn(IsPrimaryKey=true,ColumnName="HOUSEMASTER_ID")]
-           public string housemaster_id {get;set;}
+        }
+        /// <summary>
+        /// Desc:后勤人员工号
+        /// Default:
+        /// Nullable:False
+        /// </summary>           
+        [SugarColumn(IsPrimaryKey = true, ColumnName = "HOUSEMASTER_ID")]
+        public string housemaster_id { get; set; }
 
-           /// <summary>
-           /// Desc:所管楼号
-           /// Default:
-           /// Nullable:True
-           /// </summary>           
-           [SugarColumn(ColumnName="MANAGER_BULD")]
-           public int? manager_buld {get;set;}
+        /// <summary>
+        /// Desc:所管楼号
+        /// Default:
+        /// Nullable:True
+        /// </summary>           
+        [SugarColumn(ColumnName = "MANAGER_BULD")]
+        public int? manager_buld { get; set; }
 
+        [Navigate(NavigateType.ManyToOne, nameof(manager_buld))]
+        public dormitory_building_info dormitory_Building_Info { get; set; }
     }
 }

@@ -48,5 +48,7 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "STATUS")]
         public bool? status { get; set; }
 
+        [Navigate(NavigateType.OneToOne, nameof(id))]
+        public school_out_live school_out_live { get; set; }
     }
 }
