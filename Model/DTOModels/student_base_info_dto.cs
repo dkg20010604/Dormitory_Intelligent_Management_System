@@ -11,12 +11,12 @@ namespace Model.DTOModels
     {
         /// <summary>
         /// 学号
-        /// </summary>           
+        /// </summary>
         public string student_id { get; set; }
 
         /// <summary>
         /// 姓名
-        /// </summary>           
+        /// </summary>
         public string student_name { get; set; }
 
         /// <summary>
@@ -35,11 +35,6 @@ namespace Model.DTOModels
         public bool status { get; set; }
 
         /// <summary>
-        /// 密码
-        /// </summary>           
-        public string? password { get; set; }
-
-        /// <summary>
         /// 权限
         /// </summary>           
         public string? power { get; set; }
@@ -48,5 +43,9 @@ namespace Model.DTOModels
         /// 班级
         /// </summary>
         public string? class_info { get; set; }
+
+        public string? instructor { get; set; }
+
+        public string? headmaster { get; set; }
     }
 }

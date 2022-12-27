@@ -7,7 +7,7 @@ namespace Dormitory_Intelligent_Management_System.SignalR
         /// <summary>
         /// 向全体连接用户发送数据
         /// </summary>
-        /// <param name="data">数据（前端对应函数的参数）</param>
+        /// <param name="data">数据（前端对应函数的参数，大多只是作为提醒内容）</param>
         /// <returns></returns>
         public async Task SendMessage(string data)
         {

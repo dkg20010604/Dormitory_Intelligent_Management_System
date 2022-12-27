@@ -14,7 +14,6 @@ namespace Model.DbModels
         public college_info()
         {
 
-
         }
         /// <summary>
         /// Desc:学院代码

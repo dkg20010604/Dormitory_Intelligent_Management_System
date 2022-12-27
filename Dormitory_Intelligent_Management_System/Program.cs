@@ -3,6 +3,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using SqlSugar.IOC;
+using Newtonsoft.Json;
+using Model.AutoMapperProfile;
+
 namespace Dormitory_Intelligent_Management_System
 {
     public class Program
@@ -48,19 +51,23 @@ namespace Dormitory_Intelligent_Management_System
             });
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
             #region 使用Auto mapper
-            //builder.Services.AddAutoMapper();
+            builder.Services.AddAutoMapper(typeof(automapper));
             #endregion
             #region 允许跨域请求
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("Allow", builder =>
+                options.AddPolicy("signalr", builder =>
                 {
                     builder
                     .AllowCredentials()
-                    .WithOrigins("127.0.0.1")
+                    .WithOrigins("http://localhost:5173/")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .SetIsOriginAllowed(s => true);
+                });
+                options.AddPolicy("allow_all", p =>
+                {
+                    p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                 });
             });
             #endregion
@@ -72,6 +79,7 @@ namespace Dormitory_Intelligent_Management_System
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>//配置jwtBearer
             {
+                //验证jwt串信息
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
 
@@ -85,6 +93,20 @@ namespace Dormitory_Intelligent_Management_System
 
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Authentication:JwtPassword"]))
                 };
+                options.Events = new JwtBearerEvents
+                {
+                    OnChallenge = context =>
+                    {
+                        //终止默认的返回结果(必须有)
+                        context.HandleResponse();
+                        var result = JsonConvert.SerializeObject(new { Code = "401", Message = "验证失败" });
+                        context.Response.ContentType = "application/json";
+                        //验证失败返回401
+                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                        context.Response.WriteAsync(result);
+                        return Task.FromResult(0);
+                    }
+                };
             });
             //配置使用者身份
             builder.Services.AddAuthorization(
@@ -95,7 +117,7 @@ namespace Dormitory_Intelligent_Management_System
 
             builder.Services.AddSqlSugar(new IocConfig()
             {
-                ConnectionString = "Data Source=118.190.201.1;Initial Catalog=DIMS;User ID=sa;Password=1234567890.Ww",
+                ConnectionString = "Data Source=118.190.201.1;Initial Catalog=DIMS;User ID=sa;Password=123456789",
                 DbType = IocDbType.SqlServer,
                 IsAutoCloseConnection = true,
                 //直接使用 DbScoped.SugarScope 相当于EFcore的context
@@ -125,7 +147,8 @@ namespace Dormitory_Intelligent_Management_System
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors("SignalR");
+            app.UseCors("signalr");
+            app.UseCors("allow_all");
             app.MapControllers();
             app.MapHub<SignalR.Hubs>("/chathub");
 

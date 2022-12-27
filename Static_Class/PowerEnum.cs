@@ -5,7 +5,7 @@
         /// <summary>
         /// 学生权限
         /// </summary>
-        enum STUDENT_POWER
+        public enum STUDENT_POWER
         {
             /// <summary>
             /// 普通学生
@@ -23,7 +23,7 @@
         /// <summary>
         /// 老师权限
         /// </summary>
-        enum TEACHER_POWER
+        public enum TEACHER_POWER
         {
             /// <summary>
             /// 基础权限
@@ -49,7 +49,7 @@
         /// <summary>
         /// 班级类型
         /// </summary>
-        enum CLASSTYPE
+        public enum CLASSTYPE
         {
             /// <summary>
             /// 1
@@ -75,7 +75,7 @@
         /// <summary>
         /// 后勤角色
         /// </summary>
-        enum IDENTITY_TYPE
+        public enum IDENTITY_TYPE
         {
             /// <summary>
             /// 公寓中心
@@ -97,7 +97,7 @@
         /// <summary>
         /// 换宿步骤
         /// </summary>
-        enum CHANGE_ROOM_STEP
+        public enum CHANGE_ROOM_STEP
         {
             /// <summary>
             /// 发起申请
@@ -127,7 +127,7 @@
         /// <summary>
         /// 结果
         /// </summary>
-        enum THING_RESULT
+        public enum THING_RESULT
         {
             /// <summary>
             /// 进行中
@@ -149,7 +149,7 @@
         /// <summary>
         /// 退宿步骤
         /// </summary>
-        enum BACK_ROOM_STEP
+        public enum BACK_ROOM_STEP
         {
             /// <summary>
             /// 发起申请
@@ -171,7 +171,7 @@
         /// <summary>
         /// 入住步骤
         /// </summary>
-        enum INTO_STEP
+        public enum INTO_STEP
         {
             /// <summary>
             /// 提出申请
@@ -193,7 +193,7 @@
         /// <summary>
         /// 校外住宿方式
         /// </summary>
-        enum OUT_SCHOOL_LIVE_TYPE
+        public enum OUT_SCHOOL_LIVE_TYPE
         {
             /// <summary>
             /// 实习单位
@@ -215,7 +215,7 @@
         /// <summary>
         /// 校外住宿步骤
         /// </summary>
-        enum LIVE_OUT_STEP
+        public enum LIVE_OUT_STEP
         {
             /// <summary>
             /// 提出申请
@@ -241,7 +241,7 @@
         /// <summary>
         /// 违规类型
         /// </summary>
-        enum DISS_KEEP_TYPE
+        public enum DISS_KEEP_TYPE
         {
             /// <summary>
             /// 夜不归宿
@@ -267,7 +267,7 @@
         /// <summary>
         /// 维修状态
         /// </summary>
-        enum MAINTENANCE_STATUS
+        public enum MAINTENANCE_STATUS
         {
             /// <summary>
             /// 进行中

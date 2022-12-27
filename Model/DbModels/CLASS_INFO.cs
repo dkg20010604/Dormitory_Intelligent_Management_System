@@ -58,11 +58,11 @@ namespace Model.DbModels
 
         /// <summary>
         /// Desc:附加描述
-        /// Default:普本
+        /// Default:0
         /// Nullable:True
         /// </summary>           
         [SugarColumn(ColumnName = "ADDITIONAL")]
-        public string? additional { get; set; }
+        public int? additional { get; set; }
 
         /// <summary>
         /// Desc:班主任
