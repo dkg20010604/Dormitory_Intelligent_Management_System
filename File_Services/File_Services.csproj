@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.9.4" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="2.0.1" />
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
     <PackageReference Include="Npoi.Mapper" Version="4.1.0" />
   </ItemGroup>

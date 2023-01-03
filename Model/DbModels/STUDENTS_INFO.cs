@@ -80,6 +80,7 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "POWER")]
         public int? power { get; set; }
 
+        [SugarColumn(ColumnName = "BUILD_ID")]
         public int build_id { get; set; }
 
         [Navigate(NavigateType.ManyToOne, nameof(class_id))]

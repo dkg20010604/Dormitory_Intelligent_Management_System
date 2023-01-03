@@ -1,20 +1,14 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.IdentityModel.Tokens;
-using Model;
 using Model.DbModels;
-using Model.DTOModels;
-using SQLitePCL;
-using SqlSugar;
 using SqlSugar.IOC;
 using Static_Class.Result_Help;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-
+using Npoi.Mapper;
 namespace Dormitory_Intelligent_Management_System.Controllers
 {
     public class LoginInfo
@@ -79,24 +73,52 @@ namespace Dormitory_Intelligent_Management_System.Controllers
         [HttpPost("addbuild")]
         public async Task<Http_Help<string>> addinfo()
         {
-            List<live_info_build> info = new List<live_info_build>();
-            var a = await DbScoped.SugarScope.Queryable<room_info>().Includes(s => s.dormitory_building_info).ToListAsync();
-            foreach (var item in a)
-            {
-                for (int i = 1;i <= item.bed_number;i++)
+            //List<live_info_build> info = new List<live_info_build>();
+            //var a = await DbScoped.SugarScope.Queryable<room_info>().Includes(s => s.dormitory_building_info).ToListAsync();
+            //foreach (var item in a)
+            //{
+            //    for (int i = 1;i <= item.bed_number;i++)
+            //    {
+            //        info.Add(new live_info_build
+            //        {
+            //            main_key = (item.room_number * 100) + i,
+            //            room_id = item.room_id,
+            //            bed_id = i,
+            //            role = false,
+            //            build_id = item.build_id
+            //        });
+            //    }
+            //}
+            //var c =await DbScoped.SugarScope.Insertable(info).SplitTable().ExecuteCommandAsync();
+            return new Http_Helper<string>().Succeed("成功", "dsdsa");
+        }
+
+        [HttpPost("search1")]
+        public async Task<Http_Help<string>> navgat()
+        {
+            //要导航查询(分表是主表)这么写,可以传楼号，也可以直接传 live_info_build 类
+            var tablename = DbScoped.SugarScope.SplitHelper<live_info_build>().GetTableName(2);
+
+            var a = DbScoped.SugarScope.Queryable<live_info_build>().AS(tablename).Includes(s => s.room_Info).ToList();
+
+            return new Http_Helper<string>().Succeed("chengg", "dsa");
+        }
+
+        [HttpPost("search2")]
+        public async Task<Http_Help<string>> navigate()
+        {
+            //主表不能直接导航分表查询，只能leftjoin然后手动select
+            var a = DbScoped.SugarScope.Queryable<room_info>()
+                .LeftJoin(DbScoped.SugarScope.Queryable<live_info_build>()
+                    .SplitTable(t => t.Take(10)/*精确查询可以用手动指定 t => t.Where(s=>s.TableName.Contains("2"))*/), (s, l) => s.room_id == l.room_id).Where("")//.Includes()...
+                .Select((s, l) => new
                 {
-                    info.Add(new live_info_build
-                    {
-                        main_key = (item.room_number * 100) + i,
-                        room_id = item.room_id,
-                        bed_id = i,
-                        role = false,
-                        build_id = item.build_id
-                    });
-                }
-            }
-            var c = await DbScoped.SugarScope.Insertable(info).SplitTable().ExecuteReturnSnowflakeIdAsync();
-            return new Http_Helper<string>().Succeed("成功", c.ToString());
+                    build_id = l.build_id,
+                    room_number = s.room_number,
+                })
+                .ToList();
+
+            return new Http_Helper<string>().Succeed("chengg", "dsa");
         }
     }
 }

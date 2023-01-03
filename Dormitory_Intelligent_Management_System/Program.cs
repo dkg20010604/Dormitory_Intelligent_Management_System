@@ -188,6 +188,7 @@ namespace Dormitory_Intelligent_Management_System
             });
             builder.Services.ConfigurationSugar(db =>
             {
+                //设置自定义分表方法
                 db.CurrentConnectionConfig.ConfigureExternalServices.SplitTableService = new CoustemSplitTables();
                 //初始化分表
                 db.CodeFirst.SplitTables().InitTables<live_info_build>();
