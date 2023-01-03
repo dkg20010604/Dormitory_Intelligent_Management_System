@@ -80,11 +80,13 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "POWER")]
         public int? power { get; set; }
 
+        public int build_id { get; set; }
+
         [Navigate(NavigateType.ManyToOne, nameof(class_id))]
         public class_info class_Info { get; set; }
 
         [Navigate(NavigateType.OneToOne, nameof(student_id))]
-        public live_info_build_id1 live_Info { get; set; }
+        public live_info_build live_Info { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(school_out_live.student_id))]
         public List<school_out_live> school_out_lives { get; set; }

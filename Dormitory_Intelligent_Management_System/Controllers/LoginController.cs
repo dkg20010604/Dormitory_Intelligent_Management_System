@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.IdentityModel.Tokens;
+using Model;
 using Model.DbModels;
 using Model.DTOModels;
 using SQLitePCL;
+using SqlSugar;
 using SqlSugar.IOC;
 using Static_Class.Result_Help;
 using System.IdentityModel.Tokens.Jwt;
@@ -74,31 +76,27 @@ namespace Dormitory_Intelligent_Management_System.Controllers
                 return new Http_Helper<string>().Error("错误");
         }
 
-        [HttpPost("addmajor")]
-        public async Task<Http_Help<string>> addinfo(string major_name, int collid)
+        [HttpPost("addbuild")]
+        public async Task<Http_Help<string>> addinfo()
         {
-            try
+            List<live_info_build> info = new List<live_info_build>();
+            var a = await DbScoped.SugarScope.Queryable<room_info>().Includes(s => s.dormitory_building_info).ToListAsync();
+            foreach (var item in a)
             {
-                int a = await DbScoped.SugarScope.Insertable(new major_info()
+                for (int i = 1;i <= item.bed_number;i++)
                 {
-                    major_name = major_name,
-                    college_id = collid
-                }).ExecuteCommandAsync();
+                    info.Add(new live_info_build
+                    {
+                        main_key = (item.room_number * 100) + i,
+                        room_id = item.room_id,
+                        bed_id = i,
+                        role = false,
+                        build_id = item.build_id
+                    });
+                }
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            return new Http_Helper<string>().Succeed("成功添加", major_name);
-        }
-        [HttpPost("get_and_addcollege")]
-        public async Task<List<college_info_dto>> get(string collname)
-        {
-            //await DbScoped.SugarScope.Insertable(new college_info()
-            //{
-            //    college_name = collname
-            //}).ExecuteCommandAsync();
-            return _mapper.Map<List<college_info_dto>>(await DbScoped.SugarScope.Queryable<college_info>().Includes(p => p.major_infos).ToListAsync());
+            var c = await DbScoped.SugarScope.Insertable(info).SplitTable().ExecuteReturnSnowflakeIdAsync();
+            return new Http_Helper<string>().Succeed("成功", c.ToString());
         }
     }
 }

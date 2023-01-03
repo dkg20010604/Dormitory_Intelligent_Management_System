@@ -14,7 +14,6 @@ namespace Model.DbModels
         public room_info()
         {
 
-
         }
         /// <summary>
         /// Desc:房间标识
@@ -36,7 +35,7 @@ namespace Model.DbModels
         /// Desc:房间号（楼层数*100+序列号）;楼层房间号
         /// Default:
         /// Nullable:False
-        /// </summary>           
+        /// </summary>
         [SugarColumn(ColumnName = "ROOM_NUMBER")]
         public int room_number { get; set; }
 
@@ -68,12 +67,12 @@ namespace Model.DbModels
         /// Desc:缺失详情;根据价目表生成（例如：椅子x2 1400元 共计1400元）
         /// Default:
         /// Nullable:True
-        /// </summary>           
+        /// </summary>
         [SugarColumn(ColumnName = "LOST_DETAIL")]
         public string? lost_detail { get; set; }
 
-        [Navigate(NavigateType.OneToMany, nameof(live_info_build_id1.room_id))]
-        public List<live_info_build_id1> live_infos { get; set; }
+        [Navigate(NavigateType.OneToMany, nameof(live_info_build.room_id))]
+        public List<live_info_build> live_infos { get; set; }
 
         [Navigate(NavigateType.ManyToOne, nameof(build_id))]
         public dormitory_building_info dormitory_building_info { get; set; }

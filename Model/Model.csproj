@@ -10,7 +10,11 @@
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="SqlSugar.IOC" Version="1.9.0" />
-    <PackageReference Include="SqlSugarCore" Version="5.1.3.40" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.3.42" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Static_Class\Static_Class.csproj" />
   </ItemGroup>
 
 </Project>

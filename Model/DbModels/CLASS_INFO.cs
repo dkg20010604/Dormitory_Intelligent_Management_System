@@ -62,7 +62,7 @@ namespace Model.DbModels
         /// Nullable:True
         /// </summary>           
         [SugarColumn(ColumnName = "ADDITIONAL")]
-        public int? additional { get; set; }
+        public int additional { get; set; }
 
         /// <summary>
         /// Desc:班主任

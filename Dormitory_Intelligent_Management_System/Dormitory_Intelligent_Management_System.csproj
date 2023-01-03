@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Static_Class\Static_Class.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
 </Project>

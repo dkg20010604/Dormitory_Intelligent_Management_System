@@ -12,5 +12,6 @@ namespace Model.DTOModels
         public string class_name{get;set;}
         public string? headmaster { get; set; }
         public string? instructor { get; set; }
+        public List<student_base_info_dto>? students { get; set; }
     }
 }

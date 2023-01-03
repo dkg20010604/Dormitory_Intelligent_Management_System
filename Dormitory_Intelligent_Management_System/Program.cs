@@ -5,9 +5,60 @@ using System.Text;
 using SqlSugar.IOC;
 using Newtonsoft.Json;
 using Model.AutoMapperProfile;
+using Static_Class;
+using Model.DbModels;
+using SqlSugar;
+using System.Reflection;
 
 namespace Dormitory_Intelligent_Management_System
 {
+    public class CoustemSplitTables : ISplitTableService
+    {
+        /// <summary>
+        /// 查找所有分表
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="EntityInfo"></param>
+        /// <param name="tableInfos"></param>
+        /// <returns></returns>
+        public List<SplitTableInfo> GetAllTables(ISqlSugarClient db, EntityInfo EntityInfo, List<DbTableInfo> tableInfos)
+        {
+            List<SplitTableInfo> splits = new List<SplitTableInfo>();
+            foreach (var item in tableInfos)
+            {
+                if (item.Name.Contains("_BUILD_ID_"))
+                {
+                    splits.Add(new SplitTableInfo()
+                    {
+                        TableName = item.Name //要用item.name不要写错了
+                    });
+                }
+            }
+            return splits.OrderBy(it => it.TableName).ToList();
+        }
+
+        public object GetFieldValue(ISqlSugarClient db, EntityInfo entityInfo, SplitType splitType, object entityValue)
+        {
+            var splitColumn = entityInfo.Columns.FirstOrDefault(it => it.PropertyInfo.GetCustomAttribute<SplitFieldAttribute>() != null);
+            var value = splitColumn.PropertyInfo.GetValue(entityValue, null);
+            return value;
+        }
+
+        public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo)
+        {
+            return EntityInfo.DbTableName + "BUILD_ID_1";
+        }
+
+        public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo, SplitType type)
+        {
+            return EntityInfo.DbTableName + "BUILD_ID_1";
+        }
+
+        public string GetTableName(ISqlSugarClient db, EntityInfo entityInfo, SplitType splitType, object fieldValue)
+        {
+            return entityInfo.DbTableName + "BUILD_ID_" + ((int)fieldValue).ToString();
+        }
+    }
     public class Program
     {
         public static void Main(string[] args)
@@ -108,23 +159,38 @@ namespace Dormitory_Intelligent_Management_System
                     }
                 };
             });
+
             //配置使用者身份
             builder.Services.AddAuthorization(
                 options =>
                 {
-                    options.AddPolicy("权限名", policy => policy.RequireClaim("权限名"));//与生成jwt时claim相对应
-                });
 
+                    for (int i = 0;i <= 2;i++)
+                    {
+                        options.AddPolicy(((Power_Enum.STUDENT_POWER) i).ToString(), policy => policy.RequireClaim(((Power_Enum.STUDENT_POWER) i).ToString()));
+                    }
+                    for (int i = 0;i <= 4;i++)
+                    {
+                        options.AddPolicy(((Power_Enum.TEACHER_POWER) i).ToString(), policy => policy.RequireClaim(((Power_Enum.TEACHER_POWER) i).ToString()));
+                    }
+                    for (int i = 0;i <= 3;i++)
+                    {
+                        options.AddPolicy(((Power_Enum.IDENTITY_TYPE) i).ToString(), policy => policy.RequireClaim(((Power_Enum.IDENTITY_TYPE) i).ToString()));
+                    }
+                });
+            //配置SQL Sugar
             builder.Services.AddSqlSugar(new IocConfig()
             {
-                ConnectionString = "Data Source=118.190.201.1;Initial Catalog=DIMS;User ID=sa;Password=123456789",
+                ConnectionString = "Data Source=DESKTOP-54954D6\\SQLEXPRESS;Initial Catalog=DIMS;User ID=sa;Password=123456",
                 DbType = IocDbType.SqlServer,
                 IsAutoCloseConnection = true,
                 //直接使用 DbScoped.SugarScope 相当于EFcore的context
             });
             builder.Services.ConfigurationSugar(db =>
             {
-
+                db.CurrentConnectionConfig.ConfigureExternalServices.SplitTableService = new CoustemSplitTables();
+                //初始化分表
+                db.CodeFirst.SplitTables().InitTables<live_info_build>();
                 db.Aop.OnLogExecuting = (sql, p) =>
                 {
                     Console.WriteLine(sql);

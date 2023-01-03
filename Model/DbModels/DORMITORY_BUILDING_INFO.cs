@@ -41,9 +41,9 @@ namespace Model.DbModels
         public int room_bed { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(room_info.build_id))]
-        public List<room_info> room_Infos { get; set; }
+        public List<room_info>? room_Infos { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(graduation_back_room.build_id))]
-        public List<graduation_back_room> room_back_rooms { get; set; }
+        public List<graduation_back_room>? room_back_rooms { get; set; }
     }
 }

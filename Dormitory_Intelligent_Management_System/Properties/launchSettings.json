@@ -3,29 +3,24 @@
     "Dormitory_Intelligent_Management_System": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "Swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "dotnetRunMessages": true,
-      "applicationUrl": ""
+      "applicationUrl": "http://localhost:4641;http://localhost:4642"
     },
-    "IIS Express": {
+    "IIS": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      "applicationUrl": "http://localhost:8600/Swagger"
     }
   },
-  "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:17214",
-      "sslPort": 0
+      "applicationUrl": "http://localhost:5467/",
+      "sslPort": 44372
     }
   }
 }
