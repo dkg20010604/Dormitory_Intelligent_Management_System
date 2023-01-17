@@ -1,7 +1,19 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Connections.Features;
+using Microsoft.AspNetCore.SignalR;
 
 namespace Dormitory_Intelligent_Management_System.SignalR
 {
+    public class UserId : IUserIdProvider
+    {
+        public string? GetUserId(HubConnectionContext connection)
+        {
+            return connection.GetHttpContext().Request.Cookies["userid"];
+        }
+    }
+    /// <summary>
+    /// </summary>
     public class Hubs : Hub
     {
         /// <summary>
@@ -11,7 +23,7 @@ namespace Dormitory_Intelligent_Management_System.SignalR
         /// <returns></returns>
         public async Task SendMessage(string data)
         {
-            await Clients.All.SendAsync("前端函数名", data);
+            await Clients.All.SendAsync("getmessagr", data);
         }
         /// <summary>
         /// 加入特定的群组
@@ -33,8 +45,22 @@ namespace Dormitory_Intelligent_Management_System.SignalR
         /// <returns>无返回值</returns>
         public async Task SendGroup(List<string> groups, string data)
         {
-                await Clients.Groups(groups).SendAsync("TSMethorName", data);
+                await Clients.Groups(groups).SendAsync("TSMethodName", data);
         }
 
+        /// <summary>
+        /// 向发送者发消息
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public async Task SendBack(string data)
+        {
+            await Clients.Caller.SendAsync("methodname",data);
+        }
+
+        public override Task OnConnectedAsync()
+        {
+            return base.OnConnectedAsync();
+        }
     }
 }

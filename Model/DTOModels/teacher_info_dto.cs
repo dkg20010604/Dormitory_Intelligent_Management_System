@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using Model.DbModels;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,25 +19,19 @@ namespace Model.DTOModels
 
         /// <summary>
         /// Desc:姓名;为空显示为账号
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        [SugarColumn(ColumnName = "ADMIN_NAME")]
         public string? admin_name { get; set; }
 
         /// <summary>
         /// Desc:手机号
-        /// Default:
-        /// Nullable:True
-        /// </summary>           
-        [SugarColumn(ColumnName = "PHONE")]
         public string? phone { get; set; }
 
         /// <summary>
         /// Desc:权限
-        /// Default:
-        /// Nullable:False
-        /// </summary>
         public string powers { get; set; }
+
+        public List<class_info_dto>? by_headmaster { get; set; }
+
+        public List<class_info_dto>? by_instructor { get; set; }
+
     }
 }

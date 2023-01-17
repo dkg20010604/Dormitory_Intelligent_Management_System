@@ -45,5 +45,8 @@ namespace Model.DbModels
 
         [Navigate(NavigateType.OneToMany, nameof(graduation_back_room.build_id))]
         public List<graduation_back_room>? room_back_rooms { get; set; }
+
+        [Navigate(typeof(housemaster_info), nameof(housemaster_info.manager_buld), nameof(housemaster_info.housemaster_id))]
+        public List<logistics>? logistics { get; set; }
     }
 }

@@ -9,6 +9,16 @@ using Static_Class;
 using Model.DbModels;
 using SqlSugar;
 using System.Reflection;
+using Microsoft.AspNetCore.SignalR;
+using Dormitory_Intelligent_Management_System.SignalR;
+using System.IdentityModel.Tokens.Jwt;
+using JWT.Algorithms;
+using JWT.Serializers;
+using JWT;
+using Microsoft.AspNetCore.DataProtection;
+using NetTaste;
+using Newtonsoft.Json.Linq;
+using System.Security.Claims;
 
 namespace Dormitory_Intelligent_Management_System
 {
@@ -23,7 +33,7 @@ namespace Dormitory_Intelligent_Management_System
         /// <returns></returns>
         public List<SplitTableInfo> GetAllTables(ISqlSugarClient db, EntityInfo EntityInfo, List<DbTableInfo> tableInfos)
         {
-            List<SplitTableInfo> splits = new List<SplitTableInfo>();
+            List<SplitTableInfo> splits = new();
             foreach (var item in tableInfos)
             {
                 if (item.Name.Contains("_BUILD_ID_"))
@@ -56,7 +66,7 @@ namespace Dormitory_Intelligent_Management_System
 
         public string GetTableName(ISqlSugarClient db, EntityInfo entityInfo, SplitType splitType, object fieldValue)
         {
-            return entityInfo.DbTableName + "BUILD_ID_" + ((int)fieldValue).ToString();
+            return entityInfo.DbTableName + "BUILD_ID_" + ((int) fieldValue).ToString();
         }
     }
     public class Program
@@ -72,6 +82,7 @@ namespace Dormitory_Intelligent_Management_System
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSignalR();
+            builder.Services.AddSingleton<IUserIdProvider, UserId>();
             builder.Services.AddSwaggerGen(c =>
             {
                 #region Swagger使用鉴权组件
@@ -102,23 +113,22 @@ namespace Dormitory_Intelligent_Management_System
             });
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
             #region 使用Auto mapper
-            builder.Services.AddAutoMapper(typeof(automapper));
+            builder.Services.AddAutoMapper(typeof(Automapper));
             #endregion
             #region 允许跨域请求
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("signalr", builder =>
+                options.AddPolicy("SignalR", builder =>
                 {
                     builder
                     .AllowCredentials()
-                    .WithOrigins("http://localhost:5173/")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .SetIsOriginAllowed(s => true);
                 });
-                options.AddPolicy("allow_all", p =>
+                options.AddPolicy("Allow", build =>
                 {
-                    p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    build.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
                 });
             });
             #endregion
@@ -147,15 +157,46 @@ namespace Dormitory_Intelligent_Management_System
                 options.Events = new JwtBearerEvents
                 {
                     OnChallenge = context =>
+                        {
+                            //终止默认的返回结果(必须有)
+                            context.HandleResponse();
+                            var result = JsonConvert.SerializeObject(new { Code = "401", Message = "验证失败" });
+                            context.Response.ContentType = "application/json";
+                            //验证失败返回401
+                            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                            context.Response.WriteAsync(result);
+                            return Task.FromResult(0);
+                        },
+
+                    OnMessageReceived = context =>
                     {
-                        //终止默认的返回结果(必须有)
-                        context.HandleResponse();
-                        var result = JsonConvert.SerializeObject(new { Code = "401", Message = "验证失败" });
-                        context.Response.ContentType = "application/json";
-                        //验证失败返回401
-                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                        context.Response.WriteAsync(result);
-                        return Task.FromResult(0);
+                        var accessToken = context.Request.Query["access_token"];
+
+                        // If the request is for our hub...
+                        var path = context.HttpContext.Request.Path;
+                        //
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/chathub"))
+                        {
+                            try
+                            {
+                                IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
+                                IJsonSerializer serializer = new JsonNetSerializer();
+                                IDateTimeProvider provider = new UtcDateTimeProvider();
+                                IJwtValidator validator = new JwtValidator(serializer, provider);
+                                IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
+                                IJwtDecoder decoder = new JwtDecoder(serializer, validator, urlEncoder, algorithm);
+                                var json = decoder.DecodeToObject(accessToken.ToString().Split(' ')[1], Encoding.UTF8.GetBytes(builder.Configuration["Authentication:JwtPassword"]), verify: true);
+                                context.HttpContext.Response.Cookies.Append("userid", json["userid"].ToString());
+                                context.Token = accessToken;
+                            }
+                            catch (Exception)
+                            {
+                                throw;
+                            }
+
+                        }
+
+                        return Task.CompletedTask;
                     }
                 };
             });
@@ -181,7 +222,7 @@ namespace Dormitory_Intelligent_Management_System
             //配置SQL Sugar
             builder.Services.AddSqlSugar(new IocConfig()
             {
-                ConnectionString = "Data Source=DESKTOP-54954D6\\SQLEXPRESS;Initial Catalog=DIMS;User ID=sa;Password=123456",
+                ConnectionString = "Data Source=DESKTOP-DG8FD91\\SQLEXPRESS;Initial Catalog=DIMS;User ID=sa;Password=123456",
                 DbType = IocDbType.SqlServer,
                 IsAutoCloseConnection = true,
                 //直接使用 DbScoped.SugarScope 相当于EFcore的context
@@ -214,10 +255,10 @@ namespace Dormitory_Intelligent_Management_System
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors("signalr");
-            app.UseCors("allow_all");
+            app.UseCors("SignalR");
+            app.UseCors("Allow");
             app.MapControllers();
-            app.MapHub<SignalR.Hubs>("/chathub");
+            app.MapHub<Hubs>("/chathub");
 
             app.Run();
         }

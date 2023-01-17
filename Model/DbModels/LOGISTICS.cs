@@ -64,7 +64,7 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "LOGISTICS_SRC")]
         public string? logistics_src { get; set; }
 
-        [Navigate(NavigateType.OneToOne, nameof(logistics_id))]
-        public housemaster_info housemaster_Info { get; set; }
+        [Navigate(typeof(housemaster_info),nameof(housemaster_info.housemaster_id),nameof(housemaster_info.manager_buld))]
+        public List<dormitory_building_info>? housemaster_Infos { get; set; }
     }
 }

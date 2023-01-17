@@ -7,7 +7,7 @@ namespace Model.DbModels
 {
     ///<summary>
     ///居住信息;一楼一表，显示全部床信息，不管有无居住人员
-    ///表名：LIVE_INFO_BUILD_楼号
+    ///表名：LIVE_INFO_BUILD_ID_楼号
     ///</summary>
     [SplitTable(SplitType._Custom01)]
     [SugarTable("LIVE_INFO_")]
@@ -19,7 +19,7 @@ namespace Model.DbModels
 
         }
         /// <summary>
-        /// 主键 无实际意义 房间号*100+床号
+        /// 主键 房间号*100+床号
         /// 如 20101//房间号为201的房间 1号床
         /// </summary>
         [SugarColumn(IsPrimaryKey = true, ColumnName = "MAIN_KEY")]
@@ -62,9 +62,9 @@ namespace Model.DbModels
         public int build_id { get; set; }
 
         [Navigate(NavigateType.ManyToOne, nameof(room_id))]
-        public room_info room_Info { get; set; }
+        public room_info? room_Info { get; set; }
 
         [Navigate(NavigateType.OneToOne, nameof(student_id))]
-        public students_info students_Info { get; set; }
+        public students_info? students_Info { get; set; }
     }
 }

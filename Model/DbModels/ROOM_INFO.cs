@@ -72,10 +72,10 @@ namespace Model.DbModels
         public string? lost_detail { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(live_info_build.room_id))]
-        public List<live_info_build> live_infos { get; set; }
+        public List<live_info_build>? live_infos { get; set; }
 
         [Navigate(NavigateType.ManyToOne, nameof(build_id))]
-        public dormitory_building_info dormitory_building_info { get; set; }
+        public dormitory_building_info? dormitory_building_info { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(graduation_back_room.room_id))]
         public List<graduation_back_room> graduation_back_rooms { get; set; }

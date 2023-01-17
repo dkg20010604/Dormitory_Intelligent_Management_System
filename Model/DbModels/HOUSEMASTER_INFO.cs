@@ -6,7 +6,7 @@ using SqlSugar;
 namespace Model.DbModels
 {
     ///<summary>
-    ///宿管分管楼信息
+    ///宿管 所管的楼信息
     ///</summary>
     [SugarTable("HOUSEMASTER_INFO")]
     public partial class housemaster_info
@@ -31,8 +31,5 @@ namespace Model.DbModels
         /// </summary>           
         [SugarColumn(ColumnName = "MANAGER_BULD")]
         public int? manager_buld { get; set; }
-
-        [Navigate(NavigateType.ManyToOne, nameof(manager_buld))]
-        public dormitory_building_info dormitory_Building_Info { get; set; }
     }
 }

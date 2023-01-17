@@ -1,0 +1,1492 @@
+﻿<w:tblPr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:tblW w:w="10386" w:type="dxa" />
+  <w:jc w:val="center" />
+  <w:tblBorders>
+    <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+    <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+    <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+    <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+    <w:insideH w:val="single" w:color="auto" w:sz="4" w:space="0" />
+    <w:insideV w:val="single" w:color="auto" w:sz="4" w:space="0" />
+  </w:tblBorders>
+  <w:tblLayout w:type="fixed" />
+  <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0" />
+</w:tblPr>
+<w:tblGrid xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:gridCol w:w="1407" />
+  <w:gridCol w:w="2737" />
+  <w:gridCol w:w="965" />
+  <w:gridCol w:w="378" />
+  <w:gridCol w:w="1434" />
+  <w:gridCol w:w="890" />
+  <w:gridCol w:w="2575" />
+</w:tblGrid>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="561" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000B70E1">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>姓名</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="2737" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="00FF503D" w:rsidP="00AF29FD" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人姓名</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="965" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>性别</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1812" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="00FF503D" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人性别</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="890" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>院系</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="2575" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人院系</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="570" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>年级专业</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="3702" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人班级</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1812" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>联系电话</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="3465" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人电话</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="562" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>现住宿舍</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="3702" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>原住楼号</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿号公寓＿</w:t>
+      </w:r>
+      <w:r w:rsidR="00A7556E">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>_</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>原住房间号</w:t>
+      </w:r>
+      <w:r w:rsidR="00A7556E">
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>_</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿房间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1812" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>拟调入宿舍</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="3465" w:type="dxa" />
+      <w:gridSpan w:val="2" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿</w:t>
+      </w:r>
+      <w:r w:rsidR="00A7556E">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>_</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>现住楼号</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿号公寓</w:t>
+      </w:r>
+      <w:r w:rsidRPr="005A44B9">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>＿</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>现房间号</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>＿房间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="1270" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="009D32A5" w:rsidP="009D32A5" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>调宿</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="009D32A5" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>原因</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="8979" w:type="dxa" />
+      <w:gridSpan w:val="6" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidP="005A44B9" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:after="145" w:afterLines="50" w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>调宿理由</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidRPr="005A44B9" w:rsidR="000518AC" w:rsidP="009B0D26" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:firstLine="3341" w:firstLineChars="1500" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:hAnsi="Segoe UI" w:cs="Segoe UI" />
+          <w:kern w:val="0" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en" w:eastAsia="zh-Hans" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve"> 申请人：</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请人姓名</w:t>
+      </w:r>
+      <w:r w:rsidR="00AF09F8">
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">  </w:t>
+      </w:r>
+      <w:r w:rsidR="005A44B9">
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">   </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="009B0D26" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:firstLine="3341" w:firstLineChars="1500" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>申请时间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="2142" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>所在</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>院系</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>意见</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="8979" w:type="dxa" />
+      <w:gridSpan w:val="6" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidP="005A44B9" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>院系意见</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:after="145" w:afterLines="50" w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:after="145" w:afterLines="50" w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">                           辅导员签名：</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>老师姓名</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>（盖章）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:right="480" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">                                     </w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>通过院系时间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="2174" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>公寓</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>管理</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>中心</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>意见</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="8979" w:type="dxa" />
+      <w:gridSpan w:val="6" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>办理地点：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>7号公寓119</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>房间</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="001E7762" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>公寓中心意见</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:after="145" w:afterLines="50" w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">                    </w:t>
+      </w:r>
+      <w:r w:rsidR="005A44B9">
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">           </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve"> 签名：   </w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>公寓中心姓名</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>（盖章）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="009B0D26" w:rsidRDefault="001E1142">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:firstLine="3341" w:firstLineChars="1500" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">  </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>通过公寓中心时间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="2612" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:widowControl />
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>公寓</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:widowControl />
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>物业</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:widowControl />
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>公司</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="4080" w:type="dxa" />
+      <w:gridSpan w:val="3" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:szCs w:val="21" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:szCs w:val="21" />
+        </w:rPr>
+        <w:t>办理地点：现所住楼值班室</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>物品检查情况：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>物品检查结果</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="008C3A86" w:rsidP="008C3A86" w:rsidRDefault="008C3A86">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:firstLine="746" w:firstLineChars="335" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>检查人签字：</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>检查人</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="008C3A86">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t xml:space="preserve">      </w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>检查时间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="4899" w:type="dxa" />
+      <w:gridSpan w:val="3" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:widowControl />
+        <w:jc w:val="left" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:szCs w:val="21" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:szCs w:val="21" />
+        </w:rPr>
+        <w:t>办理地点：6号公寓118房间</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="008C3A86" w:rsidP="008C3A86" w:rsidRDefault="008C3A86">
+      <w:pPr>
+        <w:spacing w:after="145" w:afterLines="50" w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>物业负责人：</w:t>
+      </w:r>
+      <w:r w:rsidR="009D32A5">
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>负责人姓名</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>（盖章）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidP="008C3A86" w:rsidRDefault="009D32A5">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:left="1182" w:firstLine="668" w:firstLineChars="300" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>负责人时间</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>
+<w:tr w:rsidR="000518AC" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:trPr>
+    <w:trHeight w:val="1641" />
+    <w:jc w:val="center" />
+  </w:trPr>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="1407" w:type="dxa" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>填表</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:jc w:val="center" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>须知</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+  <w:tc>
+    <w:tcPr>
+      <w:tcW w:w="8979" w:type="dxa" />
+      <w:gridSpan w:val="6" />
+      <w:tcBorders>
+        <w:top w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:left w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:bottom w:val="single" w:color="auto" w:sz="4" w:space="0" />
+        <w:right w:val="single" w:color="auto" w:sz="4" w:space="0" />
+      </w:tcBorders>
+      <w:vAlign w:val="center" />
+    </w:tcPr>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>1.本表须辅导员签字并加盖公章后有效。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:left="327" w:hanging="327" w:hangingChars="147" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>2.本表填写完毕后方可办理调宿手续。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="000518AC" w:rsidRDefault="000518AC">
+      <w:pPr>
+        <w:spacing w:line="0" w:lineRule="atLeast" />
+        <w:ind w:left="327" w:hanging="327" w:hangingChars="147" />
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="宋体" w:hAnsi="宋体" />
+          <w:sz w:val="24" />
+        </w:rPr>
+        <w:t>3.此表一式四份，二级学院、公寓管理中心、物业公司、学生本人各留存一份</w:t>
+      </w:r>
+    </w:p>
+  </w:tc>
+</w:tr>

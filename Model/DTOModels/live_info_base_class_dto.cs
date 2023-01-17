@@ -13,13 +13,12 @@ namespace Model.DTOModels
         public string college_name { get; set; }
         public int gread { get; set; }
         public string class_name { get; set; }
-        public Dictionary<int, string> live_info { get; set; }
         public int full_number { get; set; }
         public int empty_number { get; set; }
         public string empty_list { get; set; }
         public string room_master { get; set; }
         public string headmaster { get; set; }
         public string instructor { get; set; }
-
+        public List<student_base_info_dto> students { get; set; }
     }
 }

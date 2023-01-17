@@ -11,11 +11,6 @@ namespace Model.DbModels
     [SugarTable("LIVE_OUT_APPROVAL")]
     public partial class live_out_approval
     {
-        public live_out_approval()
-        {
-
-
-        }
         /// <summary>
         /// Desc:校外住宿申请事件ID
         /// Default:

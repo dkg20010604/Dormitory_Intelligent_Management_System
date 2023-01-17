@@ -7,15 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="2.0.1" />
-    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+    <Content Remove="C:\Users\85894\.nuget\packages\officeimo.word\0.4.6\contentFiles\any\net6.0\OfficeIMO.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.19.0" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="3.1.0" />
+    <PackageReference Include="NPOI" Version="2.6.0" />
     <PackageReference Include="Npoi.Mapper" Version="4.1.0" />
+    <PackageReference Include="OfficeIMO.Word" Version="0.4.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="office">
       <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="File\调宿模板 - 复制.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

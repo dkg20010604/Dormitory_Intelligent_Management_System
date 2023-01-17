@@ -8,13 +8,26 @@ using Static_Class.Result_Help;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Npoi.Mapper;
+using Npoi.Mapper.Attributes;
+using Model.DTOModels;
+using File_Services;
+using System.Net.Http.Headers;
+using DocumentFormat.OpenXml.InkML;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Newtonsoft.Json;
+using RestSharp;
+
 namespace Dormitory_Intelligent_Management_System.Controllers
 {
     public class LoginInfo
     {
         public string username { get; set; }
         public string password { get; set; }
+    }
+    public class nameob
+    {
+        [Column("姓名")]
+        public string name { get; set; }
     }
     [Route("api/[controller]")]
     [ApiController]
@@ -47,8 +60,9 @@ namespace Dormitory_Intelligent_Management_System.Controllers
             {
                 var claims = new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, loginInfo.username),
-                    new Claim("身份名/权限名","true")//需要特定角色才能访问时在[HttpPost]下一行加上[Authorize(Policy = "身份名/权限名")]，可加多个，表示同时满足才可访问,身份名详见PowerEnum
+                    new Claim("userid", loginInfo.username),
+                    new Claim("身份名/权限名","true"),//需要特定角色才能访问时在[HttpPost]下一行加上[Authorize(Policy = "身份名/权限名")]，可加多个，表示同时满足才可访问,身份名详见PowerEnum
+                    new Claim(ClaimTypes.NameIdentifier, loginInfo.username),
                 };
 
                 var secretByte = Encoding.UTF8.GetBytes(_configuration["Authentication:JwtPassword"]);
@@ -62,7 +76,6 @@ namespace Dormitory_Intelligent_Management_System.Controllers
                    expires: DateTime.UtcNow.AddDays(10),//有效期10天
                    signingCredentials: new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)
                    );
-
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
                 return new Http_Helper<string>().Succeed("成功", tokenString);
             }
@@ -70,27 +83,10 @@ namespace Dormitory_Intelligent_Management_System.Controllers
                 return new Http_Helper<string>().Error("错误");
         }
 
-        [HttpPost("addbuild")]
-        public async Task<Http_Help<string>> addinfo()
+        [HttpPost("GetCollege")]
+        public async Task<Http_Help<List<college_info_dto>>> get_all()
         {
-            //List<live_info_build> info = new List<live_info_build>();
-            //var a = await DbScoped.SugarScope.Queryable<room_info>().Includes(s => s.dormitory_building_info).ToListAsync();
-            //foreach (var item in a)
-            //{
-            //    for (int i = 1;i <= item.bed_number;i++)
-            //    {
-            //        info.Add(new live_info_build
-            //        {
-            //            main_key = (item.room_number * 100) + i,
-            //            room_id = item.room_id,
-            //            bed_id = i,
-            //            role = false,
-            //            build_id = item.build_id
-            //        });
-            //    }
-            //}
-            //var c =await DbScoped.SugarScope.Insertable(info).SplitTable().ExecuteCommandAsync();
-            return new Http_Helper<string>().Succeed("成功", "dsdsa");
+            return new Http_Helper<List<college_info_dto>>().Succeed("成功", _mapper.Map<List<college_info_dto>>(await DbScoped.SugarScope.Queryable<college_info>().ToListAsync()));
         }
 
         [HttpPost("search1")]
@@ -107,18 +103,29 @@ namespace Dormitory_Intelligent_Management_System.Controllers
         [HttpPost("search2")]
         public async Task<Http_Help<string>> navigate()
         {
-            //主表不能直接导航分表查询，只能leftjoin然后手动select
-            var a = DbScoped.SugarScope.Queryable<room_info>()
-                .LeftJoin(DbScoped.SugarScope.Queryable<live_info_build>()
-                    .SplitTable(t => t.Take(10)/*精确查询可以用手动指定 t => t.Where(s=>s.TableName.Contains("2"))*/), (s, l) => s.room_id == l.room_id).Where("")//.Includes()...
-                .Select((s, l) => new
-                {
-                    build_id = l.build_id,
-                    room_number = s.room_number,
-                })
+            //主表导航分表使用
+            var list = DbScoped.SugarScope.Queryable<room_info>().ToList();
+            DbScoped.SugarScope.ThenMapper(list, live =>
+            {
+                live.live_infos = DbScoped.SugarScope.Queryable<live_info_build>()
+                .SplitTable(t => t.Where(n => n.TableName.Contains(live.build_id.ToString())))
+                .SetContext(s => s.room_id, () => live.room_id, live)
                 .ToList();
-
+            });
+            DbScoped.SugarScope.ThenMapper(list.SelectMany(l => l.live_infos), live =>
+            {
+                live.students_Info = DbScoped.SugarScope.Queryable<students_info>()
+                .SetContext(s => s.student_id, () => live.student_id, live)
+                .FirstOrDefault();
+            });
             return new Http_Helper<string>().Succeed("chengg", "dsa");
+        }
+
+        [HttpGet("file")]
+        public ActionResult Stream()
+        {
+            byte[] bytes = new File_Serve().Changeroom();
+            return File(bytes, "application/msword","student.docx");
         }
     }
 }

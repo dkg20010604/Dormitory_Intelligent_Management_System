@@ -80,6 +80,9 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "POWER")]
         public int? power { get; set; }
 
+        /// <summary>
+        /// 住在那栋楼
+        /// </summary>
         [SugarColumn(ColumnName = "BUILD_ID")]
         public int build_id { get; set; }
 
@@ -97,5 +100,8 @@ namespace Model.DbModels
 
         [Navigate(NavigateType.OneToMany, nameof(back_live.student_id))]
         public List<back_live> back_Lives { get; set; }
+
+        [Navigate(NavigateType.ManyToOne, nameof(build_id))]
+        public dormitory_building_info dormitory { get; set; }
     }
 }
