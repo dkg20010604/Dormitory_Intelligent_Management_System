@@ -10,7 +10,7 @@ namespace Model.DbModels
     ///表名：LIVE_INFO_BUILD_ID_楼号
     ///</summary>
     [SplitTable(SplitType._Custom01)]
-    [SugarTable("LIVE_INFO_")]
+    [SugarTable("LIVE_INFO_BUILD_")]
     public partial class live_info_build
     {
         public live_info_build()

@@ -20,7 +20,7 @@ namespace Model.DbModels
         /// Desc:后勤人员工号
         /// Default:
         /// Nullable:False
-        /// </summary>           
+        /// </summary>
         [SugarColumn(IsPrimaryKey = true, ColumnName = "HOUSEMASTER_ID")]
         public string housemaster_id { get; set; }
 
@@ -28,7 +28,7 @@ namespace Model.DbModels
         /// Desc:所管楼号
         /// Default:
         /// Nullable:True
-        /// </summary>           
+        /// </summary>
         [SugarColumn(ColumnName = "MANAGER_BULD")]
         public int? manager_buld { get; set; }
     }

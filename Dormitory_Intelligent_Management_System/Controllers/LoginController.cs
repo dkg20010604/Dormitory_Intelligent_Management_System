@@ -24,11 +24,6 @@ namespace Dormitory_Intelligent_Management_System.Controllers
         public string username { get; set; }
         public string password { get; set; }
     }
-    public class nameob
-    {
-        [Column("姓名")]
-        public string name { get; set; }
-    }
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
@@ -43,7 +38,6 @@ namespace Dormitory_Intelligent_Management_System.Controllers
             _mapper = mapper;
         }
         [HttpPost]
-
         public Http_Help<string> Login([FromBody] LoginInfo loginInfo)
         {
             //college_info college_Info = new college_info()
@@ -127,5 +121,12 @@ namespace Dormitory_Intelligent_Management_System.Controllers
             byte[] bytes = new File_Serve().Changeroom();
             return File(bytes, "application/msword","student.docx");
         }
+        //[HttpPost]
+        //public ActionResult file()
+        //{
+        //    IFormFile file = HttpContext.Request.Form.Files[0];
+        //    Stream stream = file.OpenReadStream();
+
+        //}
     }
 }

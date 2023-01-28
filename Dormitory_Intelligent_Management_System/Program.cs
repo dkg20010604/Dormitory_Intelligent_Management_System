@@ -22,6 +22,9 @@ using System.Security.Claims;
 
 namespace Dormitory_Intelligent_Management_System
 {
+    /// <summary>
+    /// ·Ö±í¸¨Öú
+    /// </summary>
     public class CoustemSplitTables : ISplitTableService
     {
         /// <summary>
@@ -36,7 +39,7 @@ namespace Dormitory_Intelligent_Management_System
             List<SplitTableInfo> splits = new();
             foreach (var item in tableInfos)
             {
-                if (item.Name.Contains("_BUILD_ID_"))
+                if (item.Name.Contains("LIVE_INFO_BUILD_"))
                 {
                     splits.Add(new SplitTableInfo()
                     {
@@ -53,22 +56,24 @@ namespace Dormitory_Intelligent_Management_System
             var value = splitColumn.PropertyInfo.GetValue(entityValue, null);
             return value;
         }
-
         public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo)
         {
-            return EntityInfo.DbTableName + "BUILD_ID_1";
+            return EntityInfo.DbTableName + "01";
         }
 
         public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo, SplitType type)
         {
-            return EntityInfo.DbTableName + "BUILD_ID_1";
+            return EntityInfo.DbTableName + "01";
         }
 
         public string GetTableName(ISqlSugarClient db, EntityInfo entityInfo, SplitType splitType, object fieldValue)
         {
-            return entityInfo.DbTableName + "BUILD_ID_" + ((int) fieldValue).ToString();
+            int id = (int) fieldValue;
+            return entityInfo.DbTableName + (id>9?id.ToString():"0"+ id.ToString());
         }
     }
+
+
     public class Program
     {
         public static void Main(string[] args)
@@ -189,7 +194,7 @@ namespace Dormitory_Intelligent_Management_System
                                 context.HttpContext.Response.Cookies.Append("userid", json["userid"].ToString());
                                 context.Token = accessToken;
                             }
-                            catch (Exception)
+                            catch
                             {
                                 throw;
                             }
