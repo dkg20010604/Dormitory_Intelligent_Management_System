@@ -1,5 +1,5 @@
 # Dormitory_Intelligent_Management_System
-`说明 on 2.4`
+# 2月4日
   Dormitory_Intelligent_Management_System/DIMS.bak 为数据库备份文件，数据库结构基本定型，修改了权限字段，对实际数据无影响，进一步完善了登录功能，填充了学院表与专业表，无特殊情况只增不减。file_server 为文件操作服务，拟通过传入数据进行文件操作，现阶段完成了根据字典类替换文字功能。
   Model存储数据库类、DTO 类以及分页数据。
   Static_Class 作为公用部分类，主要用来实现密码的MD5加密与规范返回数据。也存储了诸如班级类型、权限名称、各种事务的步骤等的枚举类
