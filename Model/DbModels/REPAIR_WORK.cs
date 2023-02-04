@@ -33,6 +33,12 @@ namespace Model.DbModels
         public string student_id { get; set; }
 
         /// <summary>
+        /// 提交人身份
+        /// </summary>
+        [SugarColumn(ColumnName ="SUBMITTER_TYPE")]
+        public int submitter_type { get; set; }
+
+        /// <summary>
         /// Desc:详细信息
         /// Default:
         /// Nullable:False
@@ -54,7 +60,7 @@ namespace Model.DbModels
         /// Nullable:False
         /// </summary>           
         [SugarColumn(ColumnName = "HANDLED")]
-        public string handled { get; set; }
+        public string handled_id { get; set; }
 
         /// <summary>
         /// Desc:创建时间
@@ -62,7 +68,7 @@ namespace Model.DbModels
         /// Nullable:True
         /// </summary>           
         [SugarColumn(ColumnName = "CREATED_TIME")]
-        public int? created_time { get; set; }
+        public DateTime? created_time { get; set; }
 
     }
 }

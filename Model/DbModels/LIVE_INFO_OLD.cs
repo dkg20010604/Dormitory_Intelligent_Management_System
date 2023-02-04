@@ -8,14 +8,19 @@ namespace Model.DbModels
     ///<summary>
     ///历史居住信息;历史表
     ///</summary>
-    [SugarTable("LIVE_INFO_OLD")]
+    [SplitTable(SplitType._Custom01)]
+    [SugarTable("LIVE_INFO_OLD_")]
     public partial class live_info_old
     {
         public live_info_old()
         {
-
-
         }
+        /// <summary>
+        /// 主键
+        /// </summary>
+        [SugarColumn(ColumnName ="ID",IsPrimaryKey =true)]
+        public long id { get; set; }
+
         /// <summary>
         /// Desc:楼号
         /// Default:
@@ -28,9 +33,17 @@ namespace Model.DbModels
         /// Desc:学号
         /// Default:
         /// Nullable:True
-        /// </summary>           
+        /// </summary>
         [SugarColumn(ColumnName = "STUDENT_ID")]
         public string? student_id { get; set; }
+
+        /// <summary>
+        /// Desc:姓名
+        /// Default:
+        /// Nullable:True
+        /// </summary>
+        [SugarColumn(ColumnName = "STUDENT_NAME")]
+        public string? student_name { get; set; }
 
         /// <summary>
         /// Desc:房间标识
@@ -52,9 +65,15 @@ namespace Model.DbModels
         /// Desc:宿舍角色
         /// Default:false
         /// Nullable:False
-        /// </summary>           
+        /// </summary>
         [SugarColumn(ColumnName = "ROLE")]
         public bool role { get; set; }
 
+        /// <summary>
+        /// 储存时间
+        /// </summary>
+        [SplitField]
+        [SugarColumn(ColumnName = "DATA_TIME")]
+        public int year { get; set; }
     }
 }

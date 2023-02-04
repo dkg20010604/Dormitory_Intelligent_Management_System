@@ -11,21 +11,13 @@ using SqlSugar;
 using System.Reflection;
 using Microsoft.AspNetCore.SignalR;
 using Dormitory_Intelligent_Management_System.SignalR;
-using System.IdentityModel.Tokens.Jwt;
-using JWT.Algorithms;
-using JWT.Serializers;
-using JWT;
-using Microsoft.AspNetCore.DataProtection;
-using NetTaste;
-using Newtonsoft.Json.Linq;
-using System.Security.Claims;
 
 namespace Dormitory_Intelligent_Management_System
 {
     /// <summary>
     /// 分表辅助
     /// </summary>
-    public class CoustemSplitTables : ISplitTableService
+    public class Old_Live : ISplitTableService
     {
         /// <summary>
         /// 查找所有分表
@@ -39,7 +31,7 @@ namespace Dormitory_Intelligent_Management_System
             List<SplitTableInfo> splits = new();
             foreach (var item in tableInfos)
             {
-                if (item.Name.Contains("LIVE_INFO_BUILD_"))
+                if (item.Name.Contains("LIVE_INFO_OLD_"))
                 {
                     splits.Add(new SplitTableInfo()
                     {
@@ -58,18 +50,18 @@ namespace Dormitory_Intelligent_Management_System
         }
         public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo)
         {
-            return EntityInfo.DbTableName + "01";
+            return EntityInfo.DbTableName + "2020";
         }
 
         public string GetTableName(ISqlSugarClient db, EntityInfo EntityInfo, SplitType type)
         {
-            return EntityInfo.DbTableName + "01";
+            return EntityInfo.DbTableName + "2020";
         }
 
         public string GetTableName(ISqlSugarClient db, EntityInfo entityInfo, SplitType splitType, object fieldValue)
         {
             int id = (int) fieldValue;
-            return entityInfo.DbTableName + (id>9?id.ToString():"0"+ id.ToString());
+            return entityInfo.DbTableName + (id / 10 * 10).ToString();
         }
     }
 
@@ -163,7 +155,7 @@ namespace Dormitory_Intelligent_Management_System
                 {
                     OnChallenge = context =>
                         {
-                            //终止默认的返回结果(必须有)
+                            //终止默认的返回结果
                             context.HandleResponse();
                             var result = JsonConvert.SerializeObject(new { Code = "401", Message = "验证失败" });
                             context.Response.ContentType = "application/json";
@@ -176,29 +168,13 @@ namespace Dormitory_Intelligent_Management_System
                     OnMessageReceived = context =>
                     {
                         var accessToken = context.Request.Query["access_token"];
-
-                        // If the request is for our hub...
+                        var a = context.Request.Headers;
+                        // 获取请求URL
                         var path = context.HttpContext.Request.Path;
-                        //
+                        //如果访问的是signalr并且携带token，此处为用户名
                         if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/chathub"))
                         {
-                            try
-                            {
-                                IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
-                                IJsonSerializer serializer = new JsonNetSerializer();
-                                IDateTimeProvider provider = new UtcDateTimeProvider();
-                                IJwtValidator validator = new JwtValidator(serializer, provider);
-                                IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
-                                IJwtDecoder decoder = new JwtDecoder(serializer, validator, urlEncoder, algorithm);
-                                var json = decoder.DecodeToObject(accessToken.ToString().Split(' ')[1], Encoding.UTF8.GetBytes(builder.Configuration["Authentication:JwtPassword"]), verify: true);
-                                context.HttpContext.Response.Cookies.Append("userid", json["userid"].ToString());
-                                context.Token = accessToken;
-                            }
-                            catch
-                            {
-                                throw;
-                            }
-
+                            context.HttpContext.Response.Cookies.Append("userid", accessToken);
                         }
 
                         return Task.CompletedTask;
@@ -234,10 +210,11 @@ namespace Dormitory_Intelligent_Management_System
             });
             builder.Services.ConfigurationSugar(db =>
             {
-                //设置自定义分表方法
-                db.CurrentConnectionConfig.ConfigureExternalServices.SplitTableService = new CoustemSplitTables();
+                //设置自定义分表方法,将过时居住信息储存，每十年分一张表
+                db.CurrentConnectionConfig.ConfigureExternalServices.SplitTableService = new Old_Live();
                 //初始化分表
-                db.CodeFirst.SplitTables().InitTables<live_info_build>();
+                db.CodeFirst.SplitTables().InitTables<live_info_old>();
+                db.CodeFirst.InitTables<live_info>();
                 db.Aop.OnLogExecuting = (sql, p) =>
                 {
                     Console.WriteLine(sql);
@@ -258,13 +235,12 @@ namespace Dormitory_Intelligent_Management_System
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
+            app.MapHub<Hubs>("/chathub");
             app.UseCors("SignalR");
             app.UseCors("Allow");
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.MapControllers();
-            app.MapHub<Hubs>("/chathub");
-
             app.Run();
         }
     }

@@ -1,10 +1,5 @@
-﻿using Dm;
-using Model.DbModels;
-using NPOI.Util;
-using OfficeIMO.Word;
-using SqlSugar.IOC;
+﻿using OfficeIMO.Word;
 using Static_Class;
-
 namespace File_Services
 {
     public class File_Serve
@@ -17,11 +12,11 @@ namespace File_Services
         /// <summary>
         /// 换宿申请文档
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
         public byte[] Changeroom()
         {
             var Chang = _Chang;
+            
             #region 查询内容并构造 Chang
 
             #endregion

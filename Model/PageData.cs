@@ -21,7 +21,7 @@
         /// <summary>
         /// 查询字符串
         /// </summary>
-        public string? quary{get; set; }
+        public string? quary { get; set; }
         /// <summary>
         /// 数据
         /// </summary>

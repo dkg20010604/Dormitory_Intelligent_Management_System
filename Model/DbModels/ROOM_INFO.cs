@@ -71,8 +71,8 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "LOST_DETAIL")]
         public string? lost_detail { get; set; }
 
-        [Navigate(NavigateType.OneToMany, nameof(live_info_build.room_id))]
-        public List<live_info_build>? live_infos { get; set; }
+        [Navigate(NavigateType.OneToMany, nameof(live_info.room_id))]
+        public List<live_info>? live_infos { get; set; }
 
         [Navigate(NavigateType.ManyToOne, nameof(build_id))]
         public dormitory_building_info? dormitory_building_info { get; set; }

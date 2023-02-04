@@ -76,12 +76,12 @@ namespace Model.DbModels
         /// Desc:权限
         /// Default:
         /// Nullable:True
-        /// </summary>           
-        [SugarColumn(ColumnName = "POWER")]
-        public int? power { get; set; }
+        /// </summary>
+        [SugarColumn(ColumnName = "POWERS", IsJson = true, ColumnDataType = "nvarchar(200)")]
+        public List<int> powers { get; set; }
 
         /// <summary>
-        /// 住在那栋楼
+        /// 楼号
         /// </summary>
         [SugarColumn(ColumnName = "BUILD_ID")]
         public int build_id { get; set; }
@@ -90,7 +90,7 @@ namespace Model.DbModels
         public class_info class_Info { get; set; }
 
         [Navigate(NavigateType.OneToOne, nameof(student_id))]
-        public live_info_build live_Info { get; set; }
+        public live_info live_Info { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(school_out_live.student_id))]
         public List<school_out_live> school_out_lives { get; set; }

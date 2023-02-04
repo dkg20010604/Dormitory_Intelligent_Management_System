@@ -53,8 +53,8 @@ namespace Model.DbModels
         /// Default:
         /// Nullable:False
         /// </summary>           
-        [SugarColumn(ColumnName = "POWERS")]
-        public int powers { get; set; }
+        [SugarColumn(ColumnName = "POWERS", IsJson = true, ColumnDataType = "nvarchar(200)")]
+        public List<int> powers { get; set; }
 
         /// <summary>
         /// Desc:印章地址
@@ -64,10 +64,19 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "SRC_LOACTION")]
         public string? src_loaction { get; set; }
 
+        /// <summary>
+        /// 所在院系id
+        /// </summary>
+        [SugarColumn(ColumnName = "COLLEGE_ID")]
+        public int? college_id { get; set; }
+
         [Navigate(NavigateType.OneToMany, nameof(class_info.headmaster))]
         public List<class_info> by_headmaster { get; set; }
 
         [Navigate(NavigateType.OneToMany, nameof(class_info.instructor))]
         public List<class_info> by_instructor { get; set; }
+
+        [Navigate(NavigateType.ManyToOne, nameof(college_id))]
+        public college_info college_Info { get; set; }
     }
 }

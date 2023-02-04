@@ -27,9 +27,15 @@
         public enum TEACHER_POWER
         {
             /// <summary>
-            /// 基础权限
+            /// 基础权限(辅导员、班主任共有)
             /// </summary>
             BASE_POWER,
+
+            /// <summary>
+            /// 学生处
+            /// </summary>
+            STUDENT_OFFICE,
+
             /// <summary>
             /// 院级管理
             /// </summary>
@@ -57,18 +63,21 @@
             /// 公寓中心
             /// </summary>
             IDENTITY_CENTER,
+
             /// <summary>
             /// 公寓负责人
             /// </summary>
             IDENTITY_CHARGE,
-            /// <summary>
-            /// 学生处
-            /// </summary>
-            STUDENT_OFFICE,
+
             /// <summary>
             /// 宿管
             /// </summary>
             HOUSE_MASTER,
+
+            /// <summary>
+            /// 维修人员
+            /// </summary>
+            REPAIR
         }
     }
 }

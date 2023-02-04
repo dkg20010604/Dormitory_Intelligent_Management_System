@@ -37,7 +37,7 @@ namespace Model.DTOModels
         /// <summary>
         /// 权限
         /// </summary>           
-        public string? power { get; set; }
+        public List<string> power { get; set; }
 
         /// <summary>
         /// 班级

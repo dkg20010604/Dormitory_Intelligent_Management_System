@@ -27,7 +27,7 @@ namespace Model.DTOModels
 
         /// <summary>
         /// Desc:权限
-        public string powers { get; set; }
+        public List<string> powers { get; set; }
 
         public List<class_info_dto>? by_headmaster { get; set; }
 

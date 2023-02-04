@@ -29,8 +29,8 @@ namespace Model.DbModels
         /// Default:
         /// Nullable:False
         /// </summary>           
-        [SugarColumn(ColumnName = "LOGISTICS_POWER")]
-        public string logistics_power { get; set; }
+        [SugarColumn(ColumnName = "LOGISTICS_PASSWORD")]
+        public string password { get; set; }
 
         /// <summary>
         /// Desc:姓名
@@ -53,8 +53,8 @@ namespace Model.DbModels
         /// Default:
         /// Nullable:True
         /// </summary>           
-        [SugarColumn(ColumnName = "LOGISTICS_IDENTITY")]
-        public int? logistics_identity { get; set; }
+        [SugarColumn(ColumnName = "POWERS", IsJson = true, ColumnDataType = "nvarchar(200)")]
+        public List<int> powers { get; set; }
 
         /// <summary>
         /// Desc:印章地址
@@ -64,7 +64,7 @@ namespace Model.DbModels
         [SugarColumn(ColumnName = "LOGISTICS_SRC")]
         public string? logistics_src { get; set; }
 
-        [Navigate(typeof(housemaster_info),nameof(housemaster_info.housemaster_id),nameof(housemaster_info.manager_buld))]
+        [Navigate(typeof(housemaster_info), nameof(housemaster_info.housemaster_id), nameof(housemaster_info.manager_buld))]
         public List<dormitory_building_info>? housemaster_Infos { get; set; }
     }
 }

@@ -34,8 +34,48 @@ namespace Model.AutoMapperProfile
             //老师信息映射
             CreateMap<teachers, teacher_info_dto>()
                 .ForMember(p => p.phone, option => option.MapFrom(src => src.phone.Substring(0, 3) + "****" + src.phone.Substring(7)))
-                .ForMember(p => p.powers, option => option.MapFrom(src =>((Power_Enum.TEACHER_POWER)src.powers).ToString()));
+                .ForMember(p => p.powers, option => option.MapFrom(src => getpower(src.powers,2)));
+            //保留旧居住信息映射
+            CreateMap<live_info, live_info_old>()
+                .ForMember(p => p.student_name, option => option.MapFrom(src => src.students_Info.student_name))
+                .ForMember(p => p.year, option => option.MapFrom(src => new DateTime().Year));
 
+            CreateMap<logistics, logistics_info_dto>();
+        }
+        /// <summary>
+        /// 将数字列表根据身份转化为字符串列表 1：学生 2：老师 3：后勤
+        /// </summary>
+        /// <param name="ints"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public List<string>? getpower(List<int> ints, int type)
+        {
+            List<string> list = new List<string>();
+            if (type == 1)
+            {
+                foreach (var item in ints)
+                {
+                    list.Add(((Power_Enum.STUDENT_POWER) item).ToString());
+                }
+                return list;
+            }
+            if(type == 2)
+            {
+                foreach (var item in ints)
+                {
+                    list.Add(((Power_Enum.TEACHER_POWER) item).ToString());
+                }
+                return list;
+            }
+            if(type==3)
+            {
+                foreach (var item in ints)
+                {
+                    list.Add(((Power_Enum.IDENTITY_TYPE) item).ToString());
+                }
+                return list;
+            }
+            return null;
         }
     }
 }
